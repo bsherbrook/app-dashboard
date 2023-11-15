@@ -1,9 +1,5 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+Appitem.create(name:'Google', description:'Search Engine', color:'Red', default_status: 'Yes', link:'http://www.google.com', position:1)
+Appitem.create(name:'Wisc', description:'UW Homepage', color:'Blue', default_status: 'No', link:'http://www.wisc.edu', position:2)
+Appitem.create(name:'GLBRC', description:'Great Lakes Bioenergy Research Center', color:'Yellow', default_status: 'Yes', link:'http://www.glbrc.org', position:3)
+Appitem.create(name:'WEI', description:'Wisconsin Energy Institute', color:'Green', default_status: 'No', link:'https://energy.wisc.edu/', position:4)
+Appitem.create(name:'Twitter', description:'Twitter', color:'Purple', default_status: 'No', link:'https://twitter.com/', position:5)

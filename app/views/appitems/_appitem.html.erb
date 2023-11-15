@@ -1,32 +1,17 @@
 <div id="<%= dom_id appitem %>">
-  <p>
-    <strong>Name:</strong>
-    <%= appitem.name %>
-  </p>
+  <h1 class='app-item-title'>
+     <a href='<%= appitem.link %>' class='app-item-title'>
+        <%= appitem.name %>
+     </a>
+  </h1>
 
   <p>
-    <strong>Description:</strong>
     <%= appitem.description %>
   </p>
-
-  <p>
-    <strong>Color:</strong>
-    <%= appitem.color %>
-  </p>
-
-  <p>
-    <strong>Default status:</strong>
-    <%= appitem.default_status %>
-  </p>
-
-  <p>
-    <strong>Link:</strong>
-    <%= appitem.link %>
-  </p>
-
-  <p>
-    <strong>Position:</strong>
+   
+    <%# <strong>Default status:</strong>
+    <%= appitem.default_status %> 
+    <%# <strong>Position:</strong>
     <%= appitem.position %>
-  </p>
 
 </div>

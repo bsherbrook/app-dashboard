@@ -1,0 +1,20 @@
+#appitems{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 20px;
+}
+.app-item-box{
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:20vw;
+    height: 20vh;
+    text-align: center;
+}
+.app-item-title{
+    color: white;
+    text-decoration: none;
+}
