@@ -66,4 +66,4 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "acts_as_list", "~> 1.1"
+gem 'acts_as_list'
