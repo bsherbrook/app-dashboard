@@ -67,3 +67,5 @@ group :test do
 end
 
 gem 'acts_as_list'
+
+gem "ranked-model", "~> 0.4.9"
