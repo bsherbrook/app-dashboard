@@ -1,0 +1,2 @@
+class Appitem < ApplicationRecord
+end

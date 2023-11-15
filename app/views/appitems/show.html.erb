@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @appitem %>
+
+<div>
+  <%= link_to "Edit this appitem", edit_appitem_path(@appitem) %> |
+  <%= link_to "Back to appitems", appitems_path %>
+
+  <%= button_to "Destroy this appitem", @appitem, method: :delete %>
+</div>

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Appitems</h1>
+
+<div id="appitems">
+  <% @appitems.each do |appitem| %>
+    <%= render appitem %>
+    <p>
+      <%= link_to "Show this appitem", appitem %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New appitem", new_appitem_path %>

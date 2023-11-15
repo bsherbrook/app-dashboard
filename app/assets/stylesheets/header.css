@@ -7,3 +7,5 @@
     display: flex;
     justify-content: space-between;
 }
+
+rails g scaffold appTable name:string description:string color:string default_status:string link:string
