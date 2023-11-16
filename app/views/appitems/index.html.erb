@@ -1,11 +1,12 @@
 <div class="home-box">
-  <h3 class='greeting'>Welcome <%= current_user.email%></h3>
   <% if !user_signed_in?%>
   <div  class='test'><%= link_to 'Sign In', new_user_session_path %></div>
   <% end %>
   <% if user_signed_in?%>
+  <h3 class='greeting'>Welcome <%= current_user.email%></h3>
     <div id="appitems" data-controller='drag'>
       <% @appitems.each do |appitem| %>
+      <%# <% if  appitem.default_status==='Yes' %>
         <div class="app-item-box" style='background-color:<%= appitem.color%>'>
         <%= render appitem %>
           <p>
@@ -13,6 +14,7 @@
             <%# <%= link_to "Show this appitem", appitem %>
           </p>
         </div>
+        <%# <%end %>
       <% end %>
     </div>
   <% end %>
