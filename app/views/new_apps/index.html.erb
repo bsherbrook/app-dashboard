@@ -1,0 +1,16 @@
+<h1>New apps</h1>
+
+<div id="new_apps">
+  <ul>
+  <% @new_apps.each do |new_app| %>
+    <li class='new-apps-list' id='<%=new_app.name%>'>
+      <%= render new_app %>
+    <p>
+      <%= button_to "Delete", new_app, method: :delete %>
+    </p>
+    </li>
+  <% end %>
+  </ul>
+</div>
+
+<%= link_to "New new app", new_new_app_path %>

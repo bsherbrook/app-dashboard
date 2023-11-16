@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @new_app %>
+
+<div>
+  <%= link_to "Edit this new app", edit_new_app_path(@new_app) %> |
+  <%= link_to "Back to new apps", new_apps_path %>
+
+  <%= button_to "Destroy this new app", @new_app, method: :delete %>
+</div>

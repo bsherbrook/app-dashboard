@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :new_apps
   devise_for :users
   resources :appitems
   # get 'home/index'

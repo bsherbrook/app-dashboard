@@ -2,12 +2,15 @@
 
 <nav class="navbar navbar-expand-lg" id='header'>
   <div class="container-fluid" id='header-flex'>
-    <div><a class="navbar-brand" href="#">App Dashboard</a></div>
-    <a class="nav-link" href="#">+ Add more to home</a>
-    <%# add dropdown menu? must include popper tag from bootstrap %>
+    <div><%= link_to 'App Dashboard',
+        appitems_path, class:"navbar-brand header" %></div>
+      <% if user_signed_in?%> 
+     <div class='header-button-box'>
+       <%= link_to '+ Add more to home',
+          new_apps_path, class:"nav-link" %>
+        <%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class:'sign-out-button' %> 
+     </div>
+    <%end%>
     </div>
   </div>
 </nav>
-<%# need security login to associate apps with a user. that can be done second.
-need a sortable list of apps lets do this today. associate users tomorrow.
-must build a list of other apps users can add to their list of apps. %>

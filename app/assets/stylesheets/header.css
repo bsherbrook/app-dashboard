@@ -7,5 +7,14 @@
     display: flex;
     justify-content: space-between;
 }
-
-rails g scaffold appTable name:string description:string color:string default_status:string link:string
+.header-button-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.sign-out-button{
+    color: rgb(32, 32, 74);
+    border: none;
+    background-color: rgb(152, 187, 187);
+}
