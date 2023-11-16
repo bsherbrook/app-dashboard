@@ -11,13 +11,14 @@
     </div>
   <% end %>
 
-  <div>
+   <h3>Are you sure you want to delete <%= appitem.name%> ?</h3>
+  <div hidden>
     <%= form.label :name, style: "display: block" %>
     <%= form.text_field :name %>
   </div>
   <br/>
 
-  <div>
+  <div hidden>
     <%= form.label :description, style: "display: block" %>
     <%= form.text_field :description %>
   </div>
@@ -29,7 +30,7 @@
 
   <div hidden>
     <%= form.label :default_status, style: "display: block" %>
-    <%= form.text_field :default_status, value:'Yes' %>
+    <%= form.text_field :default_status, value:'No' %>
   </div>
 
   <div hidden>
@@ -43,6 +44,6 @@
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit  %>
   </div>
 <% end %>

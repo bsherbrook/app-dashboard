@@ -1,10 +1,20 @@
-<h1>Editing appitem</h1>
 
+<% if @appitem.default_status==='No'%>
+<br/>
+<br/>
+<h1>Add App</h1>
 <%= render "form", appitem: @appitem %>
-
+<%end%>
+<% if @appitem.default_status==='Yes'%>
+<br/>
+<br/>
+<h1>Delete App</h1>
+<br/>
+<%= render "formdelete", appitem: @appitem %>
+<%end%>
 <br>
 
 <div>
-  <%= link_to "Show this appitem", @appitem %> |
-  <%= link_to "Back to appitems", appitems_path %>
+  <%# <%= link_to "Show this appitem", @appitem %>
+  <%= link_to "Back to Home", appitems_path %>
 </div>
