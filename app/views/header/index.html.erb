@@ -1,0 +1,15 @@
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<h1>Welcome to the Home Page!</h1>
+
+<div id="appitems" data-controller='drag'>
+  <% @appitems.each do |appitem| %>
+  <div class="app-item-box" style='background-color:<%= appitem.color%>'>
+     <%= render appitem %>
+      <p>
+        <%= button_to "Delete", appitem, method: :delete %>
+        <%# <%= link_to "Show this appitem", appitem %>
+      </p>
+  </div>
+  <% end %>
+</div>

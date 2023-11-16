@@ -1,17 +1,19 @@
-<p style="color: green"><%= notice %></p>
-
 <h1>Appitems</h1>
-
-<div id="appitems" data-controller='drag'>
-  <% @appitems.each do |appitem| %>
-  <div class="app-item-box" style='background-color:<%= appitem.color%>'>
-     <%= render appitem %>
-      <p>
-        <%= button_to "Delete", appitem, method: :delete %>
-        <%# <%= link_to "Show this appitem", appitem %>
-      </p>
+<% if !user_signed_in?%> 
+<div  class='test'><%= link_to 'Sign In', new_user_session_path %></div>
+<% end %>
+<% if user_signed_in?%> 
+<%= button_to 'Sign Out', destroy_user_session_path, method: :delete %> 
+  <div id="appitems" data-controller='drag'>
+    <% @appitems.each do |appitem| %>
+      <div class="app-item-box" style='background-color:<%= appitem.color%>'>
+      <%= render appitem %>
+        <p>
+          <%= button_to "Delete", appitem, method: :delete %>
+          <%# <%= link_to "Show this appitem", appitem %>
+        </p>
+      </div>
+    <% end %>
   </div>
-  <% end %>
-</div>
-
-<%= link_to "New appitem", new_appitem_path %>
+<% end %> 
+<%# <%= link_to "New appitem", new_appitem_path %>
